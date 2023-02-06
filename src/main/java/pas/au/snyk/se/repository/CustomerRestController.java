@@ -12,6 +12,7 @@ import pas.au.snyk.se.domain.CustomerNotFound;
 import java.net.URI;
 import java.util.Collection;
 import java.util.Optional;
+import com.vuln.lib.*;
 
 @RestController
 @RequestMapping("/v1/customers")
