@@ -7,7 +7,7 @@ COPY ./ ./
 RUN mvn -Dsnyk.skip clean package
 
 # the second stage of our build will use open jdk 11
-FROM openjdk:11.0.13-slim-buster
+FROM openjdk:11.0.16-slim-buster
 
 # copy only the artifacts we need from the first stage and discard the rest
 COPY --from=MAVEN_BUILD /target/springbootemployee-0.0.1-SNAPSHOT.jar /demo.jar
